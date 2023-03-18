@@ -1,0 +1,19 @@
+body {
+    scroll-behavior: smooth;
+}
+
+nav {
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: brown;
+}
+
+ul {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.inline-flex {
+    position: relative;
+    left: 0px;
+}
