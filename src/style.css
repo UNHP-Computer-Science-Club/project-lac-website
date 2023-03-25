@@ -1,6 +1,23 @@
-/* body {
+body {
     scroll-behavior: smooth;
+    background-color: #CFDDCF;
+    color:#4F7978;
 }
+nav {
+    background-color: #CFDDCF;
+}
+#mission_statement {
+    color: #593E35;
+}
+#LAC, #home, #volunteer, #events {
+    color: #4F7978;
+}
+#about_us, #team, #donate {
+    color: #F3E3C9;
+    background-color: #929292;
+}
+
+/* 
 
 nav {
     align-items: center;
