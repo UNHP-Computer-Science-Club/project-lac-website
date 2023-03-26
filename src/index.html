@@ -7,53 +7,33 @@
         <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="swiper-bundle.min.css">
+        <link rel="stylesheet" href="card_slider.css">
       </head>
     <body>
-      <nav
-      aria-label="Site Nav"
-      class="mx-auto flex items-center justify-between p-4 fixed top-0 left-0 right-0 z-50"
-  >
-      <a
-          href="index.html"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-lg"
-      >
-          <span class="sr-only">Logo</span>
-          <img src="/images/logo.png" alt="logo" class="rounded-lg">
-      </a> 
-  
-      <ul class="flex items-center gap-2 text-sm font-medium text-gray-500">
-          <li><a class="rounded-lg px-3 py-2 text-gray-700" href="index.html" id="home">Home</a></li>
-          <li><a class="rounded-lg px-3 py-2 text-gray-700" href="events.html" id="events">Events</a></li>
-          <li><a class="rounded-lg px-3 py-2 text-gray-700" href="volunteer.html" id="volunteer">Volunteer</a></li>
-          <li>
-              <a
-                  class="inline-flex items-center gap-2 rounded-lg px-3 py-2 bg-gray-500 hover:bg-gray-600"
-                  href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUFJPSkVDVCBMSUdIVCBBTk9USEVSIENBTkRMRSIsImFjdGlvbiI6InBheW1lbnQiLCJ0b2tlbiI6ImxhYy5kb25hdGVAZ21haWwuY29tIn0="
-                  target="_blank"
-                  id="donate"
-              >
-                  Donate
-  
-                  <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      class="h-4 w-4"
-                  >
-                      <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      ></path>
-                  </svg>
-              </a>
-          </li>
-      </ul>
-  </nav>
-  
-  <section class="">
+      <div class="mx-auto w-100" id="navbar"">
+      <nav aria-label="Site Nav" class="mx-auto flex items-center justify-between p-4 fixed top-0 left-0 right-0 z-50" style="position: fixed; top: 0; left: 50%; transform: translateX(-50%);">
+        <a href="index.html" class="inline-flex h-10 w-10 items-center justify-center rounded-lg">
+            <span class="sr-only">Logo</span>
+            <img src="/images/logo.png" alt="logo" class="rounded-lg">
+        </a> 
+      
+        <ul class="flex items-center gap-2 text-sm font-medium text-gray-500">
+            <li><a class="rounded-lg px-3 py-2 text-gray-700" href="index.html" id="home">Home</a></li>
+            <li><a class="rounded-lg px-3 py-2 text-gray-700" href="events.html" id="events">Events</a></li>
+            <li><a class="rounded-lg px-3 py-2 text-gray-700" href="volunteer.html" id="volunteer">Volunteer</a></li>
+            <li>
+                <a class="inline-flex items-center gap-2 rounded-lg px-3 py-2 bg-gray-500 hover:bg-gray-600" href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUFJPSkVDVCBMSUdIVCBBTk9USEVSIENBTkRMRSIsImFjdGlvbiI6InBheW1lbnQiLCJ0b2tlbiI6ImxhYy5kb25hdGVAZ21haWwuY29tIn0=" target="_blank" id="donate">
+                    Donate
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-4 w-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  <section>
     <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
       <div class="mx-auto max-w-xl text-center">
         <h1 class="text-3xl font-extrabold sm:text-5xl">
@@ -78,7 +58,7 @@
   
           <a
             class="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
-            href="#"
+            href="#team_carousel"
             id="team"
           >
             Team
@@ -87,18 +67,91 @@
       </div>
     </div>
   </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer class="bg-gray-800 py-4 fixed bottom-0 w-full">
-      <div class="container mx-auto px-4">
-          <p class="text-white text-center">Created By The Uplift North Hills Computer Science Club</p>
-      </div>
-    </footer>
+  <h1 id="team_carousel">Our Team</h1>
+  <div class="slide-container swiper" style="display: flex">
+    <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="/images/logo.png" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">Sriya Amati</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="/images/logo.png" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">Divya Prasanna</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="/images/logo.png" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">Srijita Kommaraju</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="image-content">
+                    <span class="overlay"></span>
+
+                    <div class="card-image">
+                        <img src="/images/logo.png" alt="" class="card-img">
+                    </div>
+                </div>
+
+                <div class="card-content">
+                    <h2 class="name">Annika Kannookkadan</h2>
+                    <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<script src="swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="bg-gray-800 py-4">
+  <div class="container mx-auto px-4">
+    <p class="text-white text-center">Made By The Uplift North Hills Computer Science Club</p>
+  </div>
+</footer>
+
     
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
